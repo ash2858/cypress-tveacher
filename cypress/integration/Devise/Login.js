@@ -4,9 +4,9 @@ describe("Validate Login", () => {
   it("allows a successful login", () => {
     cy.visit(loginPath);
 
-    cy.get("fill_email").type(testUserEmail)
-    cy.get("fill_password").type(testUserPassword)
-    cy.get("fill_submit").click()
+    cy.get(':nth-child(1) > .flex-shrink').type(testUserEmail)
+    cy.get(':nth-child(2) > .flex-shrink').type(testUserPassword)
+    cy.get('.btn').click()
 
     cy.contains(successLoginMessage)
   })
