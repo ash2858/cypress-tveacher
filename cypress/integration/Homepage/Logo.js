@@ -1,14 +1,21 @@
-import { railsActiveStorageBlobsPath } from "../../support/utils";
+import { railsActiveStorageBlobsPath, explorePath } from "../../support/utils";
 
 describe("Check logo", () => {
-    it.only("should have logo or the site title", () => {
-        cy.visit("/explore")
+  it("should have an image as a logo", () => {
+    cy.visit(explorePath);
 
-        cy.get('img.h-12')
-          .should('have.attr', 'src')
-          .should('include',railsActiveStorageBlobsPath)
-    })
-    it("should have logo which redirects to explore", () => {
-        cy.visit("/explore")
-    })
-})
+    cy.get("img.h-12")
+      .should("have.attr", "src")
+      .should("include", railsActiveStorageBlobsPath);
+
+    // A conditional needs to be added here to handle the case of no image and just the site title coming up
+  });
+
+  it("should redirect to explore when clicked", () => {
+    cy.visit(explorePath);
+
+    cy.get("img.h-12").click()
+
+    cy.url().should("include", explorePath)
+  });
+});
