@@ -4,6 +4,7 @@
     "Homepage/CourseCard.js",
     "Homepage/SearchCourse.js",
     "Homepage/Description.js",
+    "Homepage/SiteQuiz.js",
     "Shared/ContactUsPopup.js",
     "Shared/TopNavBar.js"
   ]
