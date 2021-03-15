@@ -4,7 +4,7 @@ describe("Testing site quiz button on the homepage", () => {
   it("clicks on the site quiz button", () => {
     userLogin(studentEmail);
 
-    cy.visit("/explore");
+    cy.visit(explorePath);
     cy.contains("Quizzes").scrollIntoView().wait(1000);
 
     cy.get('.quizzes > .slick-slider > .slick-next').click()
