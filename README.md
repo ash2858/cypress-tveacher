@@ -1,4 +1,4 @@
-# test-cypress
+# cypress-tveacher
 
 1. Clone this repository into your local system. 
 2. Open up a terminal and cd into the directory `test-cypress`
