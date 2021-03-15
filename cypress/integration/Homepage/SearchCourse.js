@@ -1,6 +1,10 @@
+import { userLogin, studentEmail, explorePath } from "../../support/utils";
+
 describe("Search for a course", () => {
   it("searches for a course", () => {
-    cy.visit("/explore");
+    userLogin(studentEmail);
+    cy.visit(explorePath);
+
     cy.get("#all-courses").scrollIntoView().wait(1000);
 
     cy.get("input[placeholder='Search Courses']").type("test");
