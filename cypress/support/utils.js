@@ -6,6 +6,8 @@ export const loginPath = "/devise/users/sign_in";
 
 export const testUserEmail = "febin@cloudyuga.guru";
 
+export const studentEmail = "nilam2267@gmail.com";
+
 export const testUserPassword = Cypress.env("test_user_password");
 
 export const successLoginMessage = "Signed in successfully.";

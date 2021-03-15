@@ -1,6 +1,4 @@
-import { userLogin, explorePath } from "../../support/utils";
-
-const studentEmail = "nilam2267@gmail.com";
+import { userLogin, studentEmail, explorePath } from "../../support/utils";
 
 describe("work on the course card elements", () => {
   before(() => userLogin(studentEmail));

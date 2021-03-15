@@ -1,6 +1,10 @@
+import { userLogin, studentEmail, explorePath } from "../../support/utils";
+
 describe("Check for the contact us form on the homepage", () => {
   it("fills up the contact us form", () => {
-    cy.visit("/explore");
+    userLogin(studentEmail);
+    cy.visit(explorePath);
+
     cy.get(".h-10").click();
     cy.get("#name").type("Cypress");
     cy.get("#email").type("test@cypress.com");
