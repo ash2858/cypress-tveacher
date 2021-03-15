@@ -3,6 +3,7 @@
   "testFiles": [
     "Homepage/CourseCard.js",
     "Homepage/SearchCourse.js",
+    "Homepage/Description.js",
     "Shared/ContactUsPopup.js"
   ]
 }
