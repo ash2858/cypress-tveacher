@@ -2,6 +2,10 @@ export const railsActiveStorageBlobsPath = "/rails/active_storage/blobs/";
 
 export const explorePath = "/explore";
 
+export const myCoursesPath = "/my/courses";
+
+export const blogPath = "/blog?page=";
+
 export const loginPath = "/devise/users/sign_in";
 
 export const testUserEmail = "febin@cloudyuga.guru";
