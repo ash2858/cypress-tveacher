@@ -1,7 +1,8 @@
 {
-    "baseUrl": "https://adarsh.staging.tveacher.com",
-    "testFiles": [
-        "Homepage/CourseCard.js",
-        "Shared/ContactUsPopup.js"
-    ]
+  "baseUrl": "https://adarsh.staging.tveacher.com",
+  "testFiles": [
+    "Homepage/CourseCard.js",
+    "Homepage/SearchCourse.js",
+    "Shared/ContactUsPopup.js"
+  ]
 }
