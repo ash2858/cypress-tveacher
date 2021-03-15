@@ -1,3 +1,4 @@
 {
-    "baseUrl": "https://adarsh.staging.tveacher.com"
+  "baseUrl": "https://adarsh.staging.tveacher.com",
+  "testFiles": ["Homepage/SearchCourse.js"]
 }
