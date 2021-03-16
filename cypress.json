@@ -6,6 +6,7 @@
     "Homepage/Description.js",
     "Homepage/SiteQuiz.js",
     "CourseDescriptionPage/Curriculum.js",
+    "Interactive/CourseSidebar.js",
     "Shared/ContactUsPopup.js",
     "Shared/TopNavBar.js"
   ]
