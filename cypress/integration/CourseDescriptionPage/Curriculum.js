@@ -40,4 +40,18 @@ describe("Verify the chapters on the course overview page curriculum", () => {
     cy.get(':nth-child(1) > a > p > .inline-block').should("have.attr", "src", "/packs/images/lock_open-e0513700011dae902f73a4b60fd8ae19.svg")
     cy.get(':nth-child(2) > a > p > .inline-block').should("have.attr", "src", "/packs/images/icon_lock-d9561e6b1d46b93be9e68bdc5c5afb71.svg")
   })
+
+  it("clicks on a previewable chapter", ()=>{
+    cy.contains("Three Lessons Chapter").click();
+    cy.url().should("include","/courses/test-cypress-3/interactive")
+    cy.go('back')
+  })
+
+  it("clicks on a locked chapter", ()=>{
+    cy.contains("Course Curriculum").scrollIntoView().wait(500);
+    cy.contains("Four Chapters Section").click();
+
+    cy.contains("No Preview Published Chapter").click()
+    cy.url().should("include", "/courses/test-cypress-3/confirm_enrollment")
+  })
 });
