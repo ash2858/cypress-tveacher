@@ -9,6 +9,7 @@
     "CourseDescriptionPage/Curriculum.js",
     "Interactive/CourseSidebar.js",
     "Shared/ContactUsPopup.js",
-    "Shared/TopNavBar.js"
+    "Shared/TopNavBar.js",
+    "MyCourses/MyCourses.js"
   ]
 }
