@@ -4,6 +4,8 @@ export const explorePath = "/explore";
 
 export const myCoursesPath = "/my/courses";
 
+export const courseOverviewPath = "/courses/test-cypress-3";
+
 export const blogPath = "/blog?page=";
 
 export const loginPath = "/devise/users/sign_in";

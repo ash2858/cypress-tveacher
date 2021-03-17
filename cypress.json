@@ -5,7 +5,11 @@
     "Homepage/SearchCourse.js",
     "Homepage/Description.js",
     "Homepage/SiteQuiz.js",
+    "CourseDescriptionPage/CourseOverview.js",
+    "CourseDescriptionPage/Curriculum.js",
+    "Interactive/CourseSidebar.js",
     "Shared/ContactUsPopup.js",
-    "Shared/TopNavBar.js"
+    "Shared/TopNavBar.js",
+    "MyCourses/MyCourses.js"
   ]
 }

@@ -4,8 +4,8 @@ import { userLogin, studentEmail, explorePath } from "../../support/utils";
 //   selectorPriority: ["id", "class", "attributes"],
 // });
 
-describe("Search for a course", () => {
-  it("searches for a course", () => {
+describe("check for different components on the homepage", () => {
+  it("verifies the title, short and long description on the homepage", () => {
     userLogin(studentEmail);
     cy.visit(explorePath);
 
