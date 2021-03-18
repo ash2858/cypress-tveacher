@@ -1,0 +1,23 @@
+{
+  "name": "cypress-tveacher",
+  "version": "1.0.0",
+  "description": "All the dependencies list with compatible versions.",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "cypress": "^6.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ash2858/cypress-tveacher.git"
+  },
+  "author": "adarsh2858",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ash2858/cypress-tveacher/issues"
+  },
+  "homepage": "https://github.com/ash2858/cypress-tveacher#readme"
+}
