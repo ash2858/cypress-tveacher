@@ -4,7 +4,12 @@
   "description": "All the dependencies list with compatible versions.",
   "main": "webpack.config.js",
   "dependencies": {
-    "cypress": "^6.5.0"
+    "cypress": "^6.5.0",
+    "cypress-multi-reporters": "^1.4.0",
+    "mocha": "^8.2.1",
+    "mochawesome": "^6.2.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.1.0"
   },
   "devDependencies": {},
   "scripts": {
