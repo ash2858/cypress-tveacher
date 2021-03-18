@@ -7,9 +7,13 @@
 [It would contain the sensitive credentials]
 ```
 {
-  "user_password": "****",
-  "test_user_password": "***"
+  "STUDENT_EMAIL": "nilam2267@gmail.com",
+  "COMMON_PASSWORD": "********",
+  "TEST_USER_EMAIL": "febin@cloudyuga.guru",
+  "TEST_USER_PASSWORD": "********",
+  "BASE_URL": "https://adarsh.staging.tveacher.com"
 }
+
 ```
 5. Run `npx cypress open` for the cypress desktop app to open up
 6. Open a new terminal and go into the project directory
