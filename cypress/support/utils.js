@@ -10,11 +10,11 @@ export const blogPath = "/blog?page=";
 
 export const loginPath = "/devise/users/sign_in";
 
-export const testUserEmail = "febin@cloudyuga.guru";
+export const testUserEmail = Cypress.env("TEST_USER_EMAIL");
 
-export const studentEmail = "nilam2267@gmail.com";
+export const studentEmail = Cypress.env("STUDENT_EMAIL");
 
-export const testUserPassword = Cypress.env("test_user_password");
+export const testUserPassword = Cypress.env("TEST_USER_PASSWORD");
 
 export const successLoginMessage = "Signed in successfully.";
 
@@ -25,7 +25,7 @@ export const userLogin = (currentEmail) => {
 
   cy.url().should("include", "/sign_in");
 
-  const userPassword = Cypress.env("user_password");
+  const userPassword = Cypress.env("COMMON_PASSWORD");
 
   cy.get('input[name="user[email]"]')
     .type(currentEmail)
