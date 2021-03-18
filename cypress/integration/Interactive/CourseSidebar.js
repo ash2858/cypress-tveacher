@@ -1,4 +1,8 @@
-import { userLogin, studentEmail, explorePath } from "../../support/utils";
+import {
+  userLogin,
+  studentEmail,
+  courseSymLink,
+} from "../../support/utils";
 
 describe("Verify the chapters on the course overview page curriculum", () => {
   before(() => {
@@ -10,7 +14,7 @@ describe("Verify the chapters on the course overview page curriculum", () => {
   });
 
   it("visits the interactive page of the test cypress 3 course and verifies the two sections", () => {
-    cy.visit("/courses/test-cypress-3/interactive");
+    cy.visit(`/courses/${courseSymLink}/interactive`);
     cy.get(":nth-child(1) > .section-title > span").contains(
       "Two Chapters Section"
     );

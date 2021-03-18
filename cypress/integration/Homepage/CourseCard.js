@@ -1,4 +1,10 @@
-import { userLogin, studentEmail, explorePath } from "../../support/utils";
+import {
+  userLogin,
+  studentEmail,
+  explorePath,
+  courseTitle,
+  courseSymLink,
+} from "../../support/utils";
 
 describe("work on the course card elements", () => {
   before(() => userLogin(studentEmail));
@@ -9,7 +15,7 @@ describe("work on the course card elements", () => {
 
   it("clicks on the course card", () => {
     cy.visit(explorePath);
-    cy.contains("Test Cypress 3").scrollIntoView().wait(1000).click();
-    cy.url().should("include", "/courses/test-cypress-3")
+    cy.contains(courseTitle).scrollIntoView().wait(1000).click();
+    cy.url().should("include", `/courses/${courseSymLink}`);
   });
 });

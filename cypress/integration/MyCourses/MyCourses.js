@@ -1,10 +1,16 @@
-import { userLogin, studentEmail, myCoursesPath } from "../../support/utils";
+import {
+  userLogin,
+  studentEmail,
+  myCoursesPath,
+  courseTitle,
+  courseSymLink,
+} from "../../support/utils";
 
 describe("checks the course with free trial on the my courses page", () => {
   it("clicks on the enroll again button", () => {
     userLogin(studentEmail);
     cy.visit(myCoursesPath);
-    cy.contains("Test Cypress 3")
+    cy.contains(courseTitle)
       .parent()
       .parent()
       .then(($child) => {
@@ -15,7 +21,7 @@ describe("checks the course with free trial on the my courses page", () => {
           .click();
         cy.url().should(
           "include",
-          "/courses/test-cypress-3/confirm_enrollment"
+          `/courses/${courseSymLink}/confirm_enrollment`
         );
       });
   });

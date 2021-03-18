@@ -1,4 +1,10 @@
-import { userLogin, studentEmail, explorePath } from "../../support/utils";
+import {
+  userLogin,
+  studentEmail,
+  explorePath,
+  courseTitle,
+  courseSymLink,
+} from "../../support/utils";
 
 describe("Verify the chapters on the course overview page curriculum", () => {
   before(() => {
@@ -14,9 +20,11 @@ describe("Verify the chapters on the course overview page curriculum", () => {
 
     cy.get("#all-courses").scrollIntoView().wait(1000);
 
-    cy.get("input[placeholder='Search Courses']").type("test cypress 3");
+    cy.get("input[placeholder='Search Courses']").type(
+      courseTitle.toLowerCase()
+    );
 
-    cy.contains("Test Cypress 3").scrollIntoView().wait(1000).click();
+    cy.contains(courseTitle).scrollIntoView().wait(1000).click();
   });
 
   it("verifies the sections present on the course overview page", () => {
@@ -25,33 +33,49 @@ describe("Verify the chapters on the course overview page curriculum", () => {
     cy.get(".course-accordion").contains("Four Chapters Section");
   });
 
-  it("verifies the chapters present on the curriculum", ()=>{
-    cy.get(':nth-child(1) > a > p > .font-bold').contains("Enabled Preview and Published Chapter")
-    cy.get(':nth-child(2) > a > p > .font-bold').contains("Enabled Preview and Published Chapter")
+  it("verifies the chapters present on the curriculum", () => {
+    cy.get(":nth-child(1) > a > p > .font-bold").contains(
+      "Enabled Preview and Published Chapter"
+    );
+    cy.get(":nth-child(2) > a > p > .font-bold").contains(
+      "Enabled Preview and Published Chapter"
+    );
 
     cy.get(".course-accordion").contains("Two Chapters Section").click();
     cy.get(".course-accordion").contains("Four Chapters Section").click();
 
-    cy.get(':nth-child(2) > :nth-child(2) > :nth-child(1) > a > p > .font-bold').contains("Three Lessons Chapter")
-    cy.get(':nth-child(2) > :nth-child(2) > :nth-child(2) > a > p > .font-bold').contains("No Preview Published Chapter")
-  })
+    cy.get(
+      ":nth-child(2) > :nth-child(2) > :nth-child(1) > a > p > .font-bold"
+    ).contains("Three Lessons Chapter");
+    cy.get(
+      ":nth-child(2) > :nth-child(2) > :nth-child(2) > a > p > .font-bold"
+    ).contains("No Preview Published Chapter");
+  });
 
-  it("checks for the lock and unlocked icons", ()=>{
-    cy.get(':nth-child(1) > a > p > .inline-block').should("have.attr", "src", "/packs/images/lock_open-e0513700011dae902f73a4b60fd8ae19.svg")
-    cy.get(':nth-child(2) > a > p > .inline-block').should("have.attr", "src", "/packs/images/icon_lock-d9561e6b1d46b93be9e68bdc5c5afb71.svg")
-  })
+  it("checks for the lock and unlocked icons", () => {
+    cy.get(":nth-child(1) > a > p > .inline-block").should(
+      "have.attr",
+      "src",
+      "/packs/images/lock_open-e0513700011dae902f73a4b60fd8ae19.svg"
+    );
+    cy.get(":nth-child(2) > a > p > .inline-block").should(
+      "have.attr",
+      "src",
+      "/packs/images/icon_lock-d9561e6b1d46b93be9e68bdc5c5afb71.svg"
+    );
+  });
 
-  it("clicks on a previewable chapter", ()=>{
+  it("clicks on a previewable chapter", () => {
     cy.contains("Three Lessons Chapter").click();
-    cy.url().should("include","/courses/test-cypress-3/interactive")
-    cy.go('back')
-  })
+    cy.url().should("include", `/courses/${courseSymLink}/interactive`);
+    cy.go("back");
+  });
 
-  it("clicks on a locked chapter", ()=>{
+  it("clicks on a locked chapter", () => {
     cy.contains("Course Curriculum").scrollIntoView().wait(500);
     cy.contains("Four Chapters Section").click();
 
-    cy.contains("No Preview Published Chapter").click()
-    cy.url().should("include", "/courses/test-cypress-3/confirm_enrollment")
-  })
+    cy.contains("No Preview Published Chapter").click();
+    cy.url().should("include", `/courses/${courseSymLink}/confirm_enrollment`);
+  });
 });
