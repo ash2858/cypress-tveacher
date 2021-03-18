@@ -1,4 +1,9 @@
-import { userLogin, studentEmail, explorePath, courseOverviewPath } from "../../support/utils";
+import {
+  userLogin,
+  studentEmail,
+  courseOverviewPath,
+  courseSymLink,
+} from "../../support/utils";
 
 describe("Check for the Payment Card", () => {
   before(() => {
@@ -12,6 +17,6 @@ describe("Check for the Payment Card", () => {
   it("Visit the course overview page and click pay and enroll button", () => {
     cy.visit(courseOverviewPath);
     cy.contains("Pay and Enroll").scrollIntoView().wait(500).click();
-    cy.url().should("include", "/courses/test-cypress-3/confirm_enrollment")
+    cy.url().should("include", `/courses/${courseSymLink}/confirm_enrollment`);
   });
 });

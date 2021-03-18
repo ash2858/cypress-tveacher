@@ -4,7 +4,11 @@ export const explorePath = "/explore";
 
 export const myCoursesPath = "/my/courses";
 
-export const courseOverviewPath = "/courses/test-cypress-3";
+export const courseTitle = "Test Cypress 3";
+
+export const courseSymLink = "test-cypress-3";
+
+export const courseOverviewPath = `/courses/${courseSymLink}`;
 
 export const blogPath = "/blog?page=";
 
