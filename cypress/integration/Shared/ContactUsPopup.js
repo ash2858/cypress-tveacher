@@ -6,8 +6,8 @@ describe("Check for the contact us form on the homepage", () => {
     cy.visit(explorePath);
 
     cy.get(".right-2 > .h-10").click();
-    cy.get("#name").clear();
-    cy.get("#email").clear();
+    cy.get("#name").clear().should("have.value", "");
+    cy.get("#email").clear().should("have.value", "");
     cy.get("#name").type("Cypress");
     cy.get("#email").type("test@cypress.com");
     cy.get("#message").type(
