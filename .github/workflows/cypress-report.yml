@@ -9,7 +9,6 @@ jobs:
     runs-on: ubuntu-18.04
     container: cypress/browsers:node12.16.2-chrome81-ff75
     steps:
-      - name: Install a project with a clean slate
       - uses: actions/checkout@v2
         with:
           env: true
@@ -19,6 +18,7 @@ jobs:
           TEST_USER_EMAIL: "febin@cloudyuga.guru"
           TEST_USER_PASSWORD: "test1234"
           BASE_URL: "https://adarsh.staging.tveacher.com"
+      - name: Install a project with a clean slate
         run: |
           npm ci
           $(npm bin)/cypress cache path
