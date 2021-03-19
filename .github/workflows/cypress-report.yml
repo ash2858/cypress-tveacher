@@ -13,11 +13,11 @@ jobs:
         with:
           env: true
         env:
-          STUDENT_EMAIL: "nilam2267@gmail.com"
-          COMMON_PASSWORD: "test1234"
-          TEST_USER_EMAIL: "febin@cloudyuga.guru"
-          TEST_USER_PASSWORD: "test1234"
-          BASE_URL: "https://adarsh.staging.tveacher.com"
+          CYPRESS_STUDENT_EMAIL: "nilam2267@gmail.com"
+          CYPRESS_COMMON_PASSWORD: "test1234"
+          CYPRESS_TEST_USER_EMAIL: "febin@cloudyuga.guru"
+          CYPRESS_TEST_USER_PASSWORD: "test1234"
+          CYPRESS_BASE_URL: "https://adarsh.staging.tveacher.com"
       - name: Install a project with a clean slate
         run: |
           npm ci
