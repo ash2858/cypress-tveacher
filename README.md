@@ -18,3 +18,4 @@
 5. Run `npx cypress open` for the cypress desktop app to open up
 6. Open a new terminal and go into the project directory `cypress-tveacher`
 7. Run `npx cypress run` to perform all the testing in the fashion as done by a github action for future CI/CD integration
+8. 
