@@ -11,14 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install a project with a clean slate
-        run: |
-          npm ci
-          $(npm bin)/cypress cache path
-          $(npm bin)/cypress cache list
-          $(npm bin)/cypress verify
-      - name: Run Cypress tests
-        run: npm run test:chrome
-        continue-on-error: true
         with:
           env: true
         env:
@@ -27,6 +19,14 @@ jobs:
           TEST_USER_EMAIL: "febin@cloudyuga.guru"
           TEST_USER_PASSWORD: "test1234"
           BASE_URL: "https://adarsh.staging.tveacher.com"
+        run: |
+          npm ci
+          $(npm bin)/cypress cache path
+          $(npm bin)/cypress cache list
+          $(npm bin)/cypress verify
+      - name: Run Cypress tests
+        run: npm run test:chrome
+        continue-on-error: true
 
       - name: Copy test execution videos
         run: |
