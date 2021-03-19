@@ -22,11 +22,11 @@ jobs:
         with:
           env: true
         env:
-          STUDENT_EMAIL: ${{ "nilam2267@gmail.com" }}
-          COMMON_PASSWORD: ${{ "test1234" }}
-          TEST_USER_EMAIL: ${{ "febin@cloudyuga.guru" }}
-          TEST_USER_PASSWORD: ${{ "test1234" }}
-          BASE_URL: ${{ "https://adarsh.staging.tveacher.com" }}
+          STUDENT_EMAIL: "nilam2267@gmail.com"
+          COMMON_PASSWORD: "test1234"
+          TEST_USER_EMAIL: "febin@cloudyuga.guru"
+          TEST_USER_PASSWORD: "test1234"
+          BASE_URL: "https://adarsh.staging.tveacher.com"
 
       - name: Copy test execution videos
         run: |
