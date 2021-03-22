@@ -18,6 +18,8 @@ export const testUserEmail = Cypress.env("TEST_USER_EMAIL");
 
 export const studentEmail = Cypress.env("STUDENT_EMAIL");
 
+export const adminEmail = Cypress.env("ADMIN_EMAIL");
+
 export const testUserPassword = Cypress.env("TEST_USER_PASSWORD");
 
 export const successLoginMessage = "Signed in successfully.";

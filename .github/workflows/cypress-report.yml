@@ -5,6 +5,7 @@ on:
       - "staging"
 env:
   CYPRESS_STUDENT_EMAIL: nilam2267@gmail.com
+  CYPRESS_ADMIN_EMAIL: adarsh@cloudyuga.guru
   CYPRESS_COMMON_PASSWORD: test1234
   CYPRESS_TEST_USER_EMAIL: febin@cloudyuga.guru
   CYPRESS_TEST_USER_PASSWORD: test1234
