@@ -4,7 +4,7 @@ import {
   courseSymLink,
 } from "../../support/utils";
 
-describe("Verify the chapters on the course overview page curriculum", () => {
+describe("Verify the content shown in sidebar on the interactive page", () => {
   before(() => {
     userLogin(studentEmail);
   });

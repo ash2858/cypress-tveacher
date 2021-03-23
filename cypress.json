@@ -11,5 +11,10 @@
     "Shared/ContactUsPopup.js",
     "Shared/TopNavBar.js",
     "MyCourses/MyCourses.js"
-  ]
+  ],
+  "video": false,
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  }
 }
